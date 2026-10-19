@@ -1,0 +1,52 @@
+# Tests
+
+## Test 1 - Primary booking journey [sanity]
+Viewport: desktop
+Covers: hero CTA, direct WhatsApp conversation, pre-filled enquiry message, core conversion path
+Description: Verifies the main call-to-action gives a visitor a clear route to start a conversation.
+Steps:
+1. Open the homepage
+2. Select "Book a conversation"
+3. Follow the WhatsApp destination
+Expected: The booking CTA is visible and opens a direct WhatsApp conversation with the configured RP Bookkeeping number and pre-filled enquiry message in a new tab.
+
+## Test 2 - Mobile conversion and navigation
+Viewport: mobile
+Covers: responsive navigation, sticky mobile booking CTA, About section, FAQ interaction, mobile readability
+Description: Verifies the most important conversion path remains easy to reach while scrolling on a phone-sized viewport.
+Steps:
+1. Open the homepage at 375x667
+2. Confirm "Book a conversation" remains available while scrolling
+3. Use the navigation to open the About section and then the FAQ section
+4. Expand a FAQ question
+Expected: The mobile booking CTA is reachable without covering important content, About and FAQ sections are reachable, the answer expands, and there is no horizontal page overflow.
+
+## Test 3 - About and service journey
+Viewport: desktop
+Covers: About section, audience positioning, service discovery, process explanation
+Description: Verifies a visitor can understand who RP is for, what RP provides and what happens before services begin.
+Steps:
+1. Open the homepage
+2. Review the About RP Bookkeeping section
+3. Continue through Services and How It Works
+Expected: The page clearly explains the business audience, service categories, and the conversation/agreement/process flow without unsupported testimonials, certifications or guarantees.
+
+## Test 4 - Accessibility and keyboard focus
+Viewport: desktop
+Covers: skip link, keyboard focus, semantic headings, details/summary accessibility
+Description: Verifies core keyboard and semantic accessibility features remain present.
+Steps:
+1. Load the homepage
+2. Press Tab until the "Skip to content" link receives focus
+3. Continue tabbing through navigation and FAQ controls
+Expected: Focus is visibly indicated, the skip link is usable, and FAQ controls are keyboard accessible.
+
+## Test 5 - Legal, trust and SEO foundations
+Viewport: desktop
+Covers: legal links, privacy/terms/cookies pages, canonical metadata, structured data, truthful trust messaging
+Description: Verifies the site retains its compliance and search foundations while presenting only supported business claims.
+Steps:
+1. Open the homepage
+2. Inspect the footer legal links and page metadata
+3. Open Privacy, Terms and Cookies
+Expected: All three legal pages are reachable, canonical metadata is present, structured data uses the business details already published by the site, and no fabricated reviews/certifications/statistics are displayed.
