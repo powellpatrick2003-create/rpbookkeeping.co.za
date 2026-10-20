@@ -2,11 +2,11 @@ const STORAGE_KEY = 'rpbookkeeping-manager-draft-v1';
 
 const defaults = {
   businessName: 'RP Bookkeeping Consultant (Pty) Ltd',
-  pageTitle: 'RP Bookkeeping Consultant (Pty) Ltd',
-  heroHeading: '',
-  heroText: '',
-  email: '',
-  phone: '',
+  pageTitle: 'RP Bookkeeping Consultant (Pty) Ltd | Professional Bookkeeping Services',
+  heroHeading: 'Clear books for a business you can move forward.',
+  heroText: 'Reliable bookkeeping and practical financial support for small businesses and independent professionals who want their records organised, current and easier to understand.',
+  email: 'rikapowell80@gmail.co.za',
+  phone: '+27 82 334 4329',
   whatsapp: 'https://chat.whatsapp.com/G47AhotCxSDLPO1NYkccWm?s=hd&p=i&mlu=4&ilr=4',
   primary: '#174a36',
   accent: '#c9a227',
@@ -41,7 +41,7 @@ function loadDraft() {
     const field = document.querySelector(`#${id}`);
     if (field) field.value = draft[id] ?? '';
   });
-  setStatus(localStorage.getItem(STORAGE_KEY) ? 'Draft loaded' : 'New draft');
+  setStatus(localStorage.getItem(STORAGE_KEY) ? 'Draft loaded' : 'Starting content loaded');
 }
 
 function readDraft() {
@@ -76,7 +76,7 @@ document.querySelector('#refreshPreview').addEventListener('click', () => {
   setStatus('Preview refreshed');
 });
 document.querySelector('#resetBtn').addEventListener('click', () => {
-  if (!window.confirm('Reset the local manager draft to its starting values?')) return;
+  if (!window.confirm('Reset the local manager draft to the starting values?')) return;
   localStorage.removeItem(STORAGE_KEY);
   loadDraft();
 });
