@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>RP Website Manager</title>
+  <link rel="stylesheet" href="./manager.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">RP BOOKKEEPING</p>
+      <h1>Website Manager</h1>
+      <p class="muted">Your local control centre for the website.</p>
+    </div>
+    <div class="status" id="saveStatus">Draft not saved</div>
+  </header>
+
+  <main class="shell">
+    <section class="card intro">
+      <div>
+        <span class="badge">Phase 1</span>
+        <h2>Build and own the system</h2>
+        <p>This manager is the first piece of the independent website system. It saves drafts in this browser and can export a portable content file. The public website is not changed yet.</p>
+      </div>
+      <div class="actions">
+        <button id="saveBtn" class="primary">Save draft</button>
+        <button id="exportBtn">Export content</button>
+        <button id="resetBtn" class="danger">Reset draft</button>
+      </div>
+    </section>
+
+    <div class="grid">
+      <section class="card editor">
+        <div class="section-heading">
+          <div><span class="step">01</span><h2>Site content</h2></div>
+          <p>These fields will become the editable content source for the website.</p>
+        </div>
+
+        <label>Business name<input id="businessName" type="text" /></label>
+        <label>Page title<input id="pageTitle" type="text" /></label>
+        <label>Hero heading<input id="heroHeading" type="text" /></label>
+        <label>Hero text<textarea id="heroText" rows="4"></textarea></label>
+        <label>Contact email<input id="email" type="email" /></label>
+        <label>Phone<input id="phone" type="tel" /></label>
+        <label>WhatsApp group URL<input id="whatsapp" type="url" /></label>
+      </section>
+
+      <section class="card editor">
+        <div class="section-heading">
+          <div><span class="step">02</span><h2>Brand settings</h2></div>
+          <p>Keep the green-and-gold direction while we build the full design controls.</p>
+        </div>
+        <label>Primary colour<input id="primary" type="text" /></label>
+        <label>Accent colour<input id="accent" type="text" /></label>
+        <label>Logo path<input id="logo" type="text" /></label>
+
+        <div class="checklist">
+          <h3>System roadmap</h3>
+          <label class="check"><input type="checkbox" checked disabled /> Responsive website</label>
+          <label class="check"><input type="checkbox" checked disabled /> Self-hosted Docker setup</label>
+          <label class="check"><input type="checkbox" checked disabled /> Local draft storage</label>
+          <label class="check"><input type="checkbox" disabled /> Live publish API</label>
+          <label class="check"><input type="checkbox" disabled /> Automatic backups</label>
+          <label class="check"><input type="checkbox" disabled /> Password-protected manager</label>
+          <label class="check"><input type="checkbox" disabled /> HTTPS reverse proxy</label>
+        </div>
+      </section>
+    </div>
+
+    <section class="card preview-card">
+      <div class="section-heading">
+        <div><span class="step">03</span><h2>Preview</h2></div>
+        <p>Preview the current website without changing the live domain.</p>
+      </div>
+      <div class="preview-actions">
+        <button id="refreshPreview">Refresh preview</button>
+        <a href="/" target="_blank" rel="noopener">Open website</a>
+      </div>
+      <iframe id="preview" title="RP Bookkeeping website preview" src="/"></iframe>
+    </section>
+  </main>
+
+  <script src="./manager.js" defer></script>
+</body>
+</html>
