@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>RP Website Manager</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div><strong>RP Website Manager</strong><span>Private control panel prototype</span></div>
+    <div class="actions"><button id="saveBtn">Save draft</button><button class="primary" id="exportBtn">Export content</button></div>
+  </header>
+  <main class="layout">
+    <aside class="sidebar">
+      <button class="nav active" data-section="dashboard">Dashboard</button>
+      <button class="nav" data-section="home">Home</button>
+      <button class="nav" data-section="about">About</button>
+      <button class="nav" data-section="services">Services</button>
+      <button class="nav" data-section="contact">Contact</button>
+      <button class="nav" data-section="settings">Site settings</button>
+      <div class="side-note"><b>Safety</b><p>This prototype saves drafts only in this browser. It does not publish to the public website.</p></div>
+    </aside>
+    <section class="content">
+      <section class="panel section-view active" id="dashboard">
+        <h1>Website dashboard</h1><p class="muted">Control the content that will eventually drive your self-hosted RP Bookkeeping website.</p>
+        <div class="cards"><div class="card"><b>Draft status</b><strong id="status">Not saved</strong></div><div class="card"><b>Last saved</b><strong id="savedAt">—</strong></div><div class="card"><b>Publishing</b><strong>Disabled</strong></div></div>
+        <div class="notice"><b>Next stage:</b> connect this manager to the self-hosted server API with authentication, versioned backups and a controlled publish action.</div>
+      </section>
+      <section class="panel section-view" id="home"><h2>Home page</h2><label>Headline<input data-key="home.headline"></label><label>Subheadline<textarea data-key="home.subheadline"></textarea></label><label>Primary button<input data-key="home.primaryButton"></label></section>
+      <section class="panel section-view" id="about"><h2>About</h2><label>Heading<input data-key="about.heading"></label><label>Body<textarea data-key="about.body"></textarea></label></section>
+      <section class="panel section-view" id="services"><h2>Services</h2><label>Section heading<input data-key="services.heading"></label><label>Service summary<textarea data-key="services.summary"></textarea></label></section>
+      <section class="panel section-view" id="contact"><h2>Contact</h2><label>Email<input data-key="contact.email" type="email"></label><label>Phone<input data-key="contact.phone"></label><label>WhatsApp group URL<input data-key="contact.whatsapp"></label></section>
+      <section class="panel section-view" id="settings"><h2>Site settings</h2><label>Site name<input data-key="site.name"></label><label>Canonical URL<input data-key="site.url" type="url"></label><label>SEO description<textarea data-key="site.description"></textarea></label></section>
+    </section>
+  </main>
+  <script src="./app.js"></script>
+</body>
+</html>
